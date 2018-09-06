@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e864f36-2ea2-418c-b240-568f740a776d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/school/cesar/unit/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailAccountBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailAccountBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/school/cesar/unit/EmailAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/school/cesar/unit/EmailAccountTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -35,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EmailAccountBuilder.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EmailAccountBuilder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailAccountBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
+            <state relative-caret-position="142">
+              <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
               <folding>
                 <element signature="e#1408#1409#0" expanded="true" />
                 <element signature="e#1488#1489#0" expanded="true" />
@@ -76,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmailAccountTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EmailAccountTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/school/cesar/unit/EmailAccountTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="88" column="8" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="8" />
+            <state relative-caret-position="156">
+              <caret line="88" selection-start-line="88" selection-end-line="88" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#638#639#0" expanded="true" />
@@ -206,8 +202,8 @@
         <option value="$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/school/cesar/unit/Service.java" />
-        <option value="$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailAccountBuilder.java" />
         <option value="$PROJECT_DIR$/src/test/java/school/cesar/unit/EmailAccountTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailAccountBuilder.java" />
       </list>
     </option>
   </component>
@@ -321,7 +317,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.EmailAccountTest.testStringDomain">
+  <component name="RunManager" selected="JUnit.EmailAccountTest.testStringDomain_ValidDomain">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -348,29 +344,6 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="EmailAccountTest.passwordExpired" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="unittest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="school.cesar.unit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="school.cesar.unit" />
-      <option name="MAIN_CLASS_NAME" value="school.cesar.unit.EmailAccountTest" />
-      <option name="METHOD_NAME" value="passwordExpired" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
     <configuration name="EmailAccountTest.testStringDomain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="unittest" />
       <extension name="coverage">
@@ -384,6 +357,29 @@
       <option name="PACKAGE_NAME" value="school.cesar.unit" />
       <option name="MAIN_CLASS_NAME" value="school.cesar.unit.EmailAccountTest" />
       <option name="METHOD_NAME" value="testStringDomain" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="EmailAccountTest.testStringDomain_ValidDomain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="unittest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="school.cesar.unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="school.cesar.unit" />
+      <option name="MAIN_CLASS_NAME" value="school.cesar.unit.EmailAccountTest" />
+      <option name="METHOD_NAME" value="testStringDomain_ValidDomain" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -480,18 +476,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.EmailAccountTest" />
-      <item itemvalue="JUnit.EmailAccountTest.passwordExpired" />
       <item itemvalue="JUnit.EmailAccountTest.testStringUser" />
       <item itemvalue="JUnit.EmailAccountTest.testStringDomain" />
       <item itemvalue="JUnit.EmailAccountTest.testStringUser_InvalidUser" />
+      <item itemvalue="JUnit.EmailAccountTest.testStringDomain_ValidDomain" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmailAccountTest.testStringDomain_ValidDomain" />
         <item itemvalue="JUnit.EmailAccountTest.testStringDomain" />
         <item itemvalue="JUnit.EmailAccountTest.testStringUser_InvalidUser" />
         <item itemvalue="JUnit.EmailAccountTest" />
         <item itemvalue="JUnit.EmailAccountTest.testStringUser" />
-        <item itemvalue="JUnit.EmailAccountTest.passwordExpired" />
       </list>
     </recent_temporary>
   </component>
@@ -509,15 +505,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EmailAccountTest_testStringUser - 2018.09.06 at 00h 06m 40s.xml">
-      <configuration name="EmailAccountTest.testStringUser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmailAccountTest_testStringUser - 2018.09.06 at 00h 07m 01s.xml">
-      <configuration name="EmailAccountTest.testStringUser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmailAccountTest - 2018.09.06 at 00h 10m 32s.xml">
-      <configuration name="EmailAccountTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="EmailAccountTest_testStringUser_InvalidUser - 2018.09.06 at 00h 47m 39s.xml">
       <configuration name="EmailAccountTest.testStringUser_InvalidUser" configurationId="JUnit" />
     </history-entry>
@@ -538,6 +525,15 @@
     </history-entry>
     <history-entry file="EmailAccountTest_testStringDomain - 2018.09.06 at 00h 56m 13s.xml">
       <configuration name="EmailAccountTest.testStringDomain" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmailAccountTest_testStringDomain - 2018.09.06 at 09h 52m 58s.xml">
+      <configuration name="EmailAccountTest.testStringDomain" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmailAccountTest_testStringDomain_ValidDomain - 2018.09.06 at 09h 53m 14s.xml">
+      <configuration name="EmailAccountTest.testStringDomain_ValidDomain" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmailAccountTest_testStringDomain_ValidDomain - 2018.09.06 at 09h 54m 10s.xml">
+      <configuration name="EmailAccountTest.testStringDomain_ValidDomain" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -1240,25 +1236,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailAccountBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
-          <folding>
-            <element signature="e#1408#1409#0" expanded="true" />
-            <element signature="e#1488#1489#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/school/cesar/unit/EmailAccountTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="88" column="8" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="8" />
+        <state relative-caret-position="156">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#638#639#0" expanded="true" />
             <element signature="e#676#677#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailAccountBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+          <folding>
+            <element signature="e#1408#1409#0" expanded="true" />
+            <element signature="e#1488#1489#0" expanded="true" />
           </folding>
         </state>
       </provider>

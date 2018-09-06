@@ -86,7 +86,7 @@ public class EmailAccountTest {
         emailAccount = new  EmailAccountBuilder()
                 .setDomain("gmail.com")
                 .build();
-        
+
     }
 
 

@@ -26,7 +26,7 @@ public class EmailAccountBuilder {
         if(domain.contains("..")){
             throw new RuntimeException("Domain is not valid.");
         }
-        if(domain.matches("[a-zA-Z0-9.]")){
+        if(domain.matches("[a-zA-Z0-9.]+")){
             this.domain = domain;
             return this;
         } else {
