@@ -11,13 +11,27 @@ public class EmailAccountBuilder {
     public EmailAccountBuilder(){}
 
     public EmailAccountBuilder setUser(String user) {
-        this.user = user;
-        return this;
+        if(user.matches("[a-zA-Z0-9._-]+")){
+            this.user = user;
+            return this;
+        } else {
+            throw new RuntimeException("User is not valid.");
+        }
     }
 
     public EmailAccountBuilder setDomain(String domain) {
-        this.domain = domain;
-        return this;
+        if(String.valueOf(domain.toCharArray()[0]).equals(".") || String.valueOf(domain.toCharArray()[domain.length() - 1]).equals(".") ){
+            throw new RuntimeException("Domain is not valid.");
+        }
+        if(domain.contains("..")){
+            throw new RuntimeException("Domain is not valid.");
+        }
+        if(domain.matches("[a-zA-Z0-9.]")){
+            this.domain = domain;
+            return this;
+        } else {
+            throw new RuntimeException("Domain is not valid.");
+        }
     }
 
     public EmailAccountBuilder setPassword(String password) {

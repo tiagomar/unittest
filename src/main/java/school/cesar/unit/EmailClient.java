@@ -5,9 +5,16 @@ import java.util.Collection;
 public class EmailClient {
     private Collection<EmailAccount> accounts;
     private EmailService emailService;
+    private Email email;
 
-    public void setEmailService(){
+    public EmailClient(Collection<EmailAccount> ac, EmailService emailService, Email e){
+        this.accounts = ac;
+        this.emailService = emailService;
+        this.email = e;
+    }
 
+    public void setEmailService(EmailService emailService){
+        this.emailService = emailService;
     }
 
     /*
@@ -42,7 +49,11 @@ public class EmailClient {
     - Se retorno false levantar uma exeção do tipo `RuntimeException
      */
     public void sendEmail(){
-
+        if(isValidEmail()){
+            emailService.sendEmail(this.email);
+        } else {
+            throw new RuntimeException("Email is not valid.");
+        }
     }
 
     /*
