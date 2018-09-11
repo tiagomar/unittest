@@ -65,31 +65,6 @@ public class EmailAccountTest {
         Assertions.assertEquals(91, emailAccount.daysSinceLastPasswordUpdate(emailAccount.getLastPasswordUpdate()));
     }
 
-    @Test
-    public void testStringUser_ValidUser(){
-        emailAccount = new EmailAccountBuilder()
-                .setUser("asdf._-asdf")
-                .build();
-        Assertions.assertTrue(emailAccount.getUser().matches("[a-zA-Z0-9._-]+"));
-    }
-
-    @Test
-    public void testStringUser_InvalidUser(){
-        Executable setInvalidUser = () -> emailAccount = new EmailAccountBuilder()
-                                                        .setUser("asdf@#$asdf")
-                                                        .build();
-        Assertions.assertThrows(RuntimeException.class, setInvalidUser, "User is not valid.");
-    }
-
-    @Test
-    public void testStringDomain_ValidDomain(){
-        emailAccount = new  EmailAccountBuilder()
-                .setDomain("gmail.com")
-                .build();
-
-    }
-
-
     private Date daysFromToday(Integer daysToAdd) {
         final Calendar cal = Calendar.getInstance();
         cal.add(Calendar.DATE, daysToAdd);

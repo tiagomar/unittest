@@ -54,6 +54,7 @@ public class EmailAccount {
     }
 
     public boolean verifyPasswordExpiration(Instant lastPasswordUpdate){
+        System.out.println("verifyPasswwordExpiration is running.");
         if(daysSinceLastPasswordUpdate(lastPasswordUpdate) > 90){
             return false;
         } else {
