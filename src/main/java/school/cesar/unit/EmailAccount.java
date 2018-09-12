@@ -53,13 +53,12 @@ public class EmailAccount {
         this.lastPasswordUpdate = lastPasswordUpdate;
     }
 
+    public boolean isPasswordValid(String password, Instant lastPasswordUpdate){
+        return password.length() >= 6 && verifyPasswordExpiration(lastPasswordUpdate);
+    }
+
     public boolean verifyPasswordExpiration(Instant lastPasswordUpdate){
-        System.out.println("verifyPasswwordExpiration is running.");
-        if(daysSinceLastPasswordUpdate(lastPasswordUpdate) > 90){
-            return false;
-        } else {
-            return true;
-        }
+         return daysSinceLastPasswordUpdate(lastPasswordUpdate) <= 90;
     }
 
     public long daysSinceLastPasswordUpdate(Instant lastPasswordUpdate) {

@@ -11,17 +11,13 @@ public class EmailAccountBuilder {
     public EmailAccountBuilder(){}
 
     public EmailAccountBuilder setUser(String user) {
-        if(FieldsValidation.isValidUser(user)) {
-            this.user = user;
-            return this;
-        } else return this;
+        this.user = user;
+        return this;
     }
 
     public EmailAccountBuilder setDomain(String domain) {
-        if(FieldsValidation.isValidDomain(domain)){
-            this.domain = domain;
-            return this;
-        } else return this;
+        this.domain = domain;
+        return this;
     }
 
     public EmailAccountBuilder setPassword(String password) {

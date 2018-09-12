@@ -15,6 +15,7 @@ public class EmailAccountTest {
 
     private static EmailAccount emailAccountStub;
     private static long days;
+    private static boolean expirationCheck;
 
     private static EmailAccount emailAccount;
     private static String user;
@@ -32,7 +33,36 @@ public class EmailAccountTest {
             public long daysSinceLastPasswordUpdate(Instant lastPasswordUpdate) {
                 return days;
             }
+
+            @Override
+            public boolean verifyPasswordExpiration(Instant lastPasswordUpdate){
+                return expirationCheck;
+            }
         };
+    }
+
+    @Test
+    public void isPasswordValid_With_ValidPassword_SixCharacters_NotExpired(){
+        expirationCheck = true;
+        Assertions.assertTrue(emailAccountStub.isPasswordValid("123456", Instant.now()));
+    }
+
+    @Test
+    public void isPasswordValid_With_InvalidPassword_FiveCharacters_NotExpired(){
+        expirationCheck = true;
+        Assertions.assertFalse(emailAccountStub.isPasswordValid("12345", Instant.now()));
+    }
+
+    @Test
+    public void isPasswordValid_With_InvalidPassword_SixCharacters_Expired(){
+        expirationCheck = false;
+        Assertions.assertFalse(emailAccountStub.isPasswordValid("123456", Instant.now()));
+    }
+
+    @Test
+    public void isPasswordValid_With_InvalidPassword_FiveCharacters_Expired(){
+        expirationCheck = false;
+        Assertions.assertFalse(emailAccountStub.isPasswordValid("12345", Instant.now()));
     }
 
     @Test
@@ -49,7 +79,6 @@ public class EmailAccountTest {
 
     @Test
     public void checkDaysSinceLastPasswordUpdate_Yesterday() {
-        //lastPasswordUpdate = daysFromToday(-1).toInstant();
         emailAccount = new EmailAccountBuilder()
                 .setLastPasswordUpdate(daysFromToday(-1).toInstant())
                 .build();

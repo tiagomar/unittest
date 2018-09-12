@@ -8,12 +8,21 @@ public class EmailClient {
     private Email email;
 
 
+    //public EmailClient(EmailService emailService){
+        //this.accounts = accounts;
+        //this.emailService = emailService;
+        //this.email = email;
+    //}
+
+    /*
     public EmailClient(Collection<EmailAccount> accounts, EmailService emailService){
         this.accounts = accounts;
         this.emailService = emailService;
         //this.email = email;
     }
+    */
 
+    /*
     public class EmailService implements school.cesar.unit.EmailService{
         @Override
         public boolean sendEmail(Email email) {
@@ -25,6 +34,7 @@ public class EmailClient {
             return null;
         }
     }
+    */
 
     public void setEmailService(EmailService emailService){
         this.emailService = emailService;
@@ -32,31 +42,39 @@ public class EmailClient {
 
 
 
+    public static boolean isValidUser(String user){
+        return user.matches("[a-zA-Z0-9._-]+");
+    }
+
+    public static boolean isValidDomain(String domain){
+        if(domain.contains("..")){
+            return false;
+        } else {
+            return domain.matches("^(?!\\.)[a-zA-Z0-9.]*[^.]$");
+        }
+    }
+
     /*
     Um endereço é considerado válido se possuir usuário válido,
     seguido pelo caractere arroba (@) e posteriormente um domínio válido.
     */
-    public static boolean isValidAddress(String address){
-        String[] parts = address.split("@");
-        if(address.split("@").length == 2){
-            String user = address.split("@")[0];
-            String domain = address.split("@")[1];
+    public static boolean isValidAddress(String emailAddress){
+        String[] parts = emailAddress.split("@");
+        if(emailAddress.split("@").length == 2){
+            String user = emailAddress.split("@")[0];
+            String domain = emailAddress.split("@")[1];
 
-            if(FieldsValidation.isValidUser(user) && FieldsValidation.isValidDomain(domain)){
-                return true;
-            } else {
-                return false;
-            }
+            return isValidUser(user) && isValidDomain(domain);
 
         } else {
             return false;
         }
     }
 
-    public static boolean isValidAddress(Collection<String> addresses){
+    public static boolean isValidAddress(Collection<String> emailAddresses){
         boolean flag = true;
-        for(String address : addresses){
-            if(!isValidAddress(address)){
+        for(String emailAddress : emailAddresses){
+            if(!isValidAddress(emailAddress)){
                 flag = false;
             }
         }
@@ -89,9 +107,9 @@ public class EmailClient {
     - Se password inválido levantar uma exeção do tipo RuntimeException
     - Chamar emailService.emailList(account)
     */
-    public Collection<Email> emailList(EmailAccount account){
-        if(account.verifyPasswordExpiration(account.getLastPasswordUpdate())){
-            return emailService.emailList(account);
+    public Collection<Email> emailList(EmailAccount emailAccount){
+        if(emailAccount.isPasswordValid(emailAccount.getPassword(), emailAccount.getLastPasswordUpdate())){
+            return emailService.emailList(emailAccount);
         } else {
             throw new RuntimeException("Password is expired!");
         }

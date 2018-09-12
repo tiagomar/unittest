@@ -14,7 +14,12 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
 
+import static school.cesar.unit.EmailClient.isValidDomain;
+//import static school.cesar.unit.EmailClient.isValidEmail;
 import static school.cesar.unit.EmailClient.isValidEmail;
+import static school.cesar.unit.EmailClient.isValidUser;
+
+
 
 public class EmailClientTest {
     private static Collection<String> to;
@@ -24,6 +29,7 @@ public class EmailClientTest {
     private static EmailClient emailClient;
     private static Collection<EmailAccount> accounts;
 
+    /*
     private static class EmailServiceStub implements EmailService{
 
         @Override
@@ -64,13 +70,44 @@ public class EmailClientTest {
     }
 
     private static EmailServiceStub emailServiceStub;
+    */
 
 
-
-
+    /*
     @BeforeAll
     public static void setUp() {
         emailServiceStub = new EmailServiceStub();
+    }
+    */
+
+    @Test
+    public void validateUserShouldReturnTrueForValidUser(){
+        Assertions.assertTrue(isValidUser("v4lid._-Us3r"));
+    }
+
+    @Test
+    public void validateUserShouldReturnFalseForInvalidUser(){
+        Assertions.assertFalse(isValidUser("Invalid*._-user"));
+    }
+
+    @Test
+    public void validateUserShouldReturnTrueForValidDomain(){
+        Assertions.assertTrue(isValidDomain("cesar.school"));
+    }
+
+    @Test
+    public void validateUserShouldReturnFalseForInvalidDomain_PeriodAsFirstCharacter(){
+        Assertions.assertFalse(isValidDomain(".cesar.school"));
+    }
+
+    @Test
+    public void validateUserShouldReturnFalseForInvalidDomain_PeriodAsLastCharacter(){
+        Assertions.assertFalse(isValidDomain("cesar.school."));
+    }
+
+    @Test
+    public void validateUserShouldReturnFalseForInvalidDomain_DoublePeriod(){
+        Assertions.assertFalse(isValidDomain("cesar..school"));
     }
 
     @Test
@@ -268,7 +305,7 @@ public class EmailClientTest {
     }
 
 
-
+    //todo
     @Test
     public void testIsValidAddressCollection_With_ValidCollection(){
         to = new ArrayList<String>();
@@ -276,7 +313,7 @@ public class EmailClientTest {
         ((ArrayList<String>) to).add("aaaa@cesar.school");
         ((ArrayList<String>) to).add("aaaaa@cesar.school");
     }
-
+    //todo
     @Test
     public void testIsValidAddressCollection_With_InvalidCollection(){
         to = new ArrayList<String>();
@@ -285,6 +322,7 @@ public class EmailClientTest {
         ((ArrayList<String>) to).add("aaaaa@cesar.school");
     }
 
+    /*
     @Test
     public void testEmailList_With_ValidPassword(){
         EmailAccount account = new EmailAccountBuilder()
@@ -324,7 +362,8 @@ public class EmailClientTest {
                         .setLastPasswordUpdate(Instant.now())
                         .build());
 
-        emailClient = new EmailClient(accounts, emailServiceStub);
+        //emailClient = new EmailClient(accounts, emailServiceStub);
 
     }
+    */
 }
