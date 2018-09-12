@@ -2,15 +2,14 @@ package school.cesar.unit;
 
 import java.util.Collection;
 
+
 public class EmailClient {
-    private Collection<EmailAccount> accounts;
-    private EmailService emailService;
-    private Email email;
+     private EmailService emailService;
 
 
     //public EmailClient(EmailService emailService){
         //this.accounts = accounts;
-        //this.emailService = emailService;
+      //  this.emailService = emailService;
         //this.email = email;
     //}
 
@@ -42,11 +41,11 @@ public class EmailClient {
 
 
 
-    public static boolean isValidUser(String user){
+    public boolean isValidUser(String user){
         return user.matches("[a-zA-Z0-9._-]+");
     }
 
-    public static boolean isValidDomain(String domain){
+    public boolean isValidDomain(String domain){
         if(domain.contains("..")){
             return false;
         } else {
@@ -58,7 +57,7 @@ public class EmailClient {
     Um endereço é considerado válido se possuir usuário válido,
     seguido pelo caractere arroba (@) e posteriormente um domínio válido.
     */
-    public static boolean isValidAddress(String emailAddress){
+    public boolean isValidAddress(String emailAddress){
         String[] parts = emailAddress.split("@");
         if(emailAddress.split("@").length == 2){
             String user = emailAddress.split("@")[0];
@@ -71,7 +70,7 @@ public class EmailClient {
         }
     }
 
-    public static boolean isValidAddress(Collection<String> emailAddresses){
+    public boolean isValidAddress(Collection<String> emailAddresses){
         boolean flag = true;
         for(String emailAddress : emailAddresses){
             if(!isValidAddress(emailAddress)){
@@ -86,7 +85,7 @@ public class EmailClient {
     um destinatário (to) válido, ao menos um emissor (from) válido
     e os demais e-mails também sejam válidos
     */
-    public static boolean isValidEmail(Email email){
+    public boolean isValidEmail(Email email){
         if(email.getCreationDate() != null){
             if(isValidAddress(email.getFrom())){
                 if(email.getTo().size() != 0 && isValidAddress(email.getTo())){

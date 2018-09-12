@@ -2,6 +2,7 @@ package school.cesar.unit;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Executable;
@@ -14,10 +15,11 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
 
-import static school.cesar.unit.EmailClient.isValidDomain;
+//import static school.cesar.unit.EmailClient.isValidDomain;
 //import static school.cesar.unit.EmailClient.isValidEmail;
-import static school.cesar.unit.EmailClient.isValidEmail;
-import static school.cesar.unit.EmailClient.isValidUser;
+//import static school.cesar.unit.EmailClient.isValidEmail;
+//import static school.cesar.unit.EmailClient.isValidUser;
+import static school.cesar.unit.EmailClient.*;
 
 
 
@@ -72,72 +74,78 @@ public class EmailClientTest {
     private static EmailServiceStub emailServiceStub;
     */
 
-
     /*
     @BeforeAll
     public static void setUp() {
         emailServiceStub = new EmailServiceStub();
     }
     */
+    private static EmailService emailService;
+    @BeforeAll
+    public static void setUp(){
+        emailClient = new EmailClient();
+    }
 
     @Test
     public void validateUserShouldReturnTrueForValidUser(){
-        Assertions.assertTrue(isValidUser("v4lid._-Us3r"));
+        //emailClient.set
+        Assertions.assertTrue(emailClient.isValidUser("v4lid._-Us3r"));
     }
 
     @Test
     public void validateUserShouldReturnFalseForInvalidUser(){
-        Assertions.assertFalse(isValidUser("Invalid*._-user"));
+        Assertions.assertFalse(emailClient.isValidUser("Invalid*._-user"));
     }
 
     @Test
     public void validateUserShouldReturnTrueForValidDomain(){
-        Assertions.assertTrue(isValidDomain("cesar.school"));
+        Assertions.assertTrue(emailClient.isValidDomain("cesar.school"));
+
     }
 
     @Test
     public void validateUserShouldReturnFalseForInvalidDomain_PeriodAsFirstCharacter(){
-        Assertions.assertFalse(isValidDomain(".cesar.school"));
+        Assertions.assertFalse(emailClient.isValidDomain(".cesar.school"));
     }
 
     @Test
     public void validateUserShouldReturnFalseForInvalidDomain_PeriodAsLastCharacter(){
-        Assertions.assertFalse(isValidDomain("cesar.school."));
+        Assertions.assertFalse(emailClient.isValidDomain("cesar.school."));
     }
 
     @Test
     public void validateUserShouldReturnFalseForInvalidDomain_DoublePeriod(){
-        Assertions.assertFalse(isValidDomain("cesar..school"));
+        Assertions.assertFalse(emailClient.isValidDomain("cesar..school"));
     }
 
     @Test
     public void testIsValidAddress_With_ValidAddress(){
-        Assertions.assertTrue(EmailClient.isValidAddress("tfm@cesar.school"));
+        Assertions.assertTrue(emailClient.isValidAddress("tfm@cesar.school"));
     }
 
     @Test
     public void testIsValidAddress_With_InvalidUser_ValidDomain(){
-        Assertions.assertFalse(EmailClient.isValidAddress("t*m@cesar.school"));
+        Assertions.assertFalse(emailClient.isValidAddress("t*m@cesar.school"));
     }
 
     @Test
     public void testIsValidAddress_With_ValidUser_InvalidDomain(){
-        Assertions.assertFalse(EmailClient.isValidAddress("tfm@cesar..school"));
+        Assertions.assertFalse(emailClient.isValidAddress("tfm@cesar..school"));
     }
 
     @Test
     public void testIsValidAddress_With_InvalidUser_InvalidDomain(){
-        Assertions.assertFalse(EmailClient.isValidAddress("tfm@cesar..school"));
+        Assertions.assertFalse(emailClient.isValidAddress("tfm@cesar..school"));
     }
 
     @Test
     public void testIsValidAddress_With_InvalidAddress_NoAt(){
-        Assertions.assertFalse(EmailClient.isValidAddress("tfmcesar.school"));
+        Assertions.assertFalse(emailClient.isValidAddress("tfmcesar.school"));
     }
 
     @Test
     public void testIsValidAddress_With_InvalidAddress_TwoAts(){
-        Assertions.assertFalse(EmailClient.isValidAddress("tfm@cesa@r.school"));
+        Assertions.assertFalse(emailClient.isValidAddress("tfm@cesa@r.school"));
     }
 
     @Test
@@ -161,7 +169,7 @@ public class EmailClientTest {
                 .setBcc(bcc)
                 .build();
 
-        Assertions.assertTrue(isValidEmail(email));
+        Assertions.assertTrue(emailClient.isValidEmail(email));
     }
 
     @Test
@@ -182,7 +190,7 @@ public class EmailClientTest {
                 .setBcc(bcc)
                 .build();
 
-        Assertions.assertTrue(isValidEmail(email));
+        Assertions.assertTrue(emailClient.isValidEmail(email));
     }
 
     @Test
@@ -205,7 +213,7 @@ public class EmailClientTest {
                 .setBcc(bcc)
                 .build();
 
-        Assertions.assertFalse(isValidEmail(email));
+        Assertions.assertFalse(emailClient.isValidEmail(email));
     }
 
     @Test
@@ -229,7 +237,7 @@ public class EmailClientTest {
                 .setBcc(bcc)
                 .build();
 
-        Assertions.assertFalse(isValidEmail(email));
+        Assertions.assertFalse(emailClient.isValidEmail(email));
     }
 
     @Test
@@ -253,7 +261,7 @@ public class EmailClientTest {
                 .setBcc(bcc)
                 .build();
 
-        Assertions.assertFalse(isValidEmail(email));
+        Assertions.assertFalse(emailClient.isValidEmail(email));
     }
 
     @Test
@@ -277,7 +285,7 @@ public class EmailClientTest {
                 .setBcc(bcc)
                 .build();
 
-        Assertions.assertFalse(isValidEmail(email));
+        Assertions.assertFalse(emailClient.isValidEmail(email));
     }
 
     @Test
@@ -301,7 +309,7 @@ public class EmailClientTest {
                 .setBcc(bcc)
                 .build();
 
-        Assertions.assertFalse(isValidEmail(email));
+        Assertions.assertFalse(emailClient.isValidEmail(email));
     }
 
 

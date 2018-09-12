@@ -1,7 +1,9 @@
 package school.cesar.unit;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Executable;
 import java.util.Collection;
 
 public class EmailServiceTest {
@@ -28,7 +30,9 @@ public class EmailServiceTest {
 
         emailClient.setEmailService(emailService);
         Email email = new EmailBuilder().build();
-        emailClient.sendEmail(email);
+        //emailClient.sendEmail(email);
+
+        Assertions.assertThrows(RuntimeException.class,() -> emailClient.sendEmail(email));
 
 
     }
