@@ -8,7 +8,8 @@ public class EmailAccountBuilder {
     private String password;
     private Instant lastPasswordUpdate;
 
-    public EmailAccountBuilder(){}
+    public EmailAccountBuilder() {
+    }
 
     public EmailAccountBuilder setUser(String user) {
         this.user = user;
@@ -30,7 +31,7 @@ public class EmailAccountBuilder {
         return this;
     }
 
-    public EmailAccount build(){
-        return new EmailAccount(user,domain,password,lastPasswordUpdate);
+    public EmailAccount build() {
+        return new EmailAccount(user, domain, password, lastPasswordUpdate);
     }
 }

@@ -3,8 +3,6 @@ package school.cesar.unit;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.function.Executable;
 
 import java.time.Instant;
 import java.util.Calendar;
@@ -35,32 +33,48 @@ public class EmailAccountTest {
             }
 
             @Override
-            public boolean verifyPasswordExpiration(Instant lastPasswordUpdate){
+            public boolean verifyPasswordExpiration(Instant lastPasswordUpdate) {
                 return expirationCheck;
             }
         };
     }
 
     @Test
-    public void isPasswordValid_With_ValidPassword_SixCharacters_NotExpired(){
+    public void isPasswordLongerThanSixCharacters_With_SixCharacters(){
+        emailAccount = new EmailAccountBuilder()
+                .setPassword("123456")
+                .build();
+        Assertions.assertTrue(emailAccount.isPasswordLongerThanSixCharacters(emailAccount.getPassword()));
+    }
+
+    @Test
+    public void isPasswordLongerThanSixCharacters_With_LessThanSixCharacters(){
+        emailAccount = new EmailAccountBuilder()
+                .setPassword("12345")
+                .build();
+        Assertions.assertFalse(emailAccount.isPasswordLongerThanSixCharacters(emailAccount.getPassword()));
+    }
+
+    @Test
+    public void isPasswordValid_With_ValidPassword_SixCharacters_NotExpired() {
         expirationCheck = true;
         Assertions.assertTrue(emailAccountStub.isPasswordValid("123456", Instant.now()));
     }
 
     @Test
-    public void isPasswordValid_With_InvalidPassword_FiveCharacters_NotExpired(){
+    public void isPasswordValid_With_InvalidPassword_FiveCharacters_NotExpired() {
         expirationCheck = true;
         Assertions.assertFalse(emailAccountStub.isPasswordValid("12345", Instant.now()));
     }
 
     @Test
-    public void isPasswordValid_With_InvalidPassword_SixCharacters_Expired(){
+    public void isPasswordValid_With_InvalidPassword_SixCharacters_Expired() {
         expirationCheck = false;
         Assertions.assertFalse(emailAccountStub.isPasswordValid("123456", Instant.now()));
     }
 
     @Test
-    public void isPasswordValid_With_InvalidPassword_FiveCharacters_Expired(){
+    public void isPasswordValid_With_InvalidPassword_FiveCharacters_Expired() {
         expirationCheck = false;
         Assertions.assertFalse(emailAccountStub.isPasswordValid("12345", Instant.now()));
     }

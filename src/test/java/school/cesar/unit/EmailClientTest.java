@@ -2,154 +2,115 @@ package school.cesar.unit;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Executable;
-import java.time.Duration;
 import java.time.Instant;
-import java.time.LocalDate;
-import java.time.temporal.Temporal;
-import java.time.temporal.TemporalAccessor;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collection;
-
-//import static school.cesar.unit.EmailClient.isValidDomain;
-//import static school.cesar.unit.EmailClient.isValidEmail;
-//import static school.cesar.unit.EmailClient.isValidEmail;
-//import static school.cesar.unit.EmailClient.isValidUser;
-import static school.cesar.unit.EmailClient.*;
-
-
+import java.util.Iterator;
+import java.util.List;
 
 public class EmailClientTest {
     private static Collection<String> to;
     private static Collection<String> cc;
     private static Collection<String> bcc;
-    private static Collection<Email> emails;
     private static EmailClient emailClient;
+    private static EmailAccount emailAccount;
+    private static String user;
+    private static String domain;
+    private static String password;
+    private static Instant lasPasswordUpdate;
+    private static boolean moreThanSix;
+    private static boolean validUser;
     private static Collection<EmailAccount> accounts;
 
-    /*
-    private static class EmailServiceStub implements EmailService{
-
-        @Override
-        public boolean sendEmail(Email email) {
-            return true;
-        }
-
-        @Override
-        public Collection<Email> emailList(EmailAccount account) {
-            to = new ArrayList<String>();
-            ((ArrayList<String>) to).add("asdf@cesar.school");
-
-            Email email_1 = new EmailBuilder()
-                    .setCreationDate(Instant.now())
-                    .setFrom("tfm@cesar.school")
-                    .setTo(to)
-                    .setSubject("This is a Subject")
-                    .setMessage("This is the body of the message.")
-                    .build();
-
-            Email email_2 = new EmailBuilder()
-                    .setCreationDate(Instant.now())
-                    .setFrom("tfm@cesar.school")
-                    .setTo(to)
-                    .setSubject("This is another Subject")
-                    .setMessage("This is not the body of the message.")
-                    .build();
-
-            emails = new ArrayList<Email>();
-            emails.add(email_1);
-            emails.add(email_2);
-
-            if(account.verifyPasswordExpiration(account.getLastPasswordUpdate())){
-                return emails;
-            } else throw new RuntimeException("Password is expired!");
-
-        }
-    }
-
-    private static EmailServiceStub emailServiceStub;
-    */
-
-    /*
     @BeforeAll
     public static void setUp() {
-        emailServiceStub = new EmailServiceStub();
-    }
-    */
-    private static EmailService emailService;
-    @BeforeAll
-    public static void setUp(){
         emailClient = new EmailClient();
     }
 
     @Test
-    public void validateUserShouldReturnTrueForValidUser(){
-        //emailClient.set
+    public void validateUserShouldReturnTrueForValidUser() {
         Assertions.assertTrue(emailClient.isValidUser("v4lid._-Us3r"));
     }
 
     @Test
-    public void validateUserShouldReturnFalseForInvalidUser(){
+    public void validateUserShouldReturnFalseForInvalidUser() {
         Assertions.assertFalse(emailClient.isValidUser("Invalid*._-user"));
     }
 
     @Test
-    public void validateUserShouldReturnTrueForValidDomain(){
+    public void validateUserShouldReturnTrueForValidDomain() {
         Assertions.assertTrue(emailClient.isValidDomain("cesar.school"));
-
     }
 
     @Test
-    public void validateUserShouldReturnFalseForInvalidDomain_PeriodAsFirstCharacter(){
+    public void validateUserShouldReturnFalseForInvalidDomain_PeriodAsFirstCharacter() {
         Assertions.assertFalse(emailClient.isValidDomain(".cesar.school"));
     }
 
     @Test
-    public void validateUserShouldReturnFalseForInvalidDomain_PeriodAsLastCharacter(){
+    public void validateUserShouldReturnFalseForInvalidDomain_PeriodAsLastCharacter() {
         Assertions.assertFalse(emailClient.isValidDomain("cesar.school."));
     }
 
     @Test
-    public void validateUserShouldReturnFalseForInvalidDomain_DoublePeriod(){
+    public void validateUserShouldReturnFalseForInvalidDomain_DoublePeriod() {
         Assertions.assertFalse(emailClient.isValidDomain("cesar..school"));
     }
 
     @Test
-    public void testIsValidAddress_With_ValidAddress(){
+    public void testIsValidAddress_With_ValidAddress() {
         Assertions.assertTrue(emailClient.isValidAddress("tfm@cesar.school"));
     }
 
     @Test
-    public void testIsValidAddress_With_InvalidUser_ValidDomain(){
+    public void testIsValidAddress_With_InvalidUser_ValidDomain() {
         Assertions.assertFalse(emailClient.isValidAddress("t*m@cesar.school"));
     }
 
     @Test
-    public void testIsValidAddress_With_ValidUser_InvalidDomain(){
+    public void testIsValidAddress_With_ValidUser_InvalidDomain() {
         Assertions.assertFalse(emailClient.isValidAddress("tfm@cesar..school"));
     }
 
     @Test
-    public void testIsValidAddress_With_InvalidUser_InvalidDomain(){
+    public void testIsValidAddress_With_InvalidUser_InvalidDomain() {
         Assertions.assertFalse(emailClient.isValidAddress("tfm@cesar..school"));
     }
 
     @Test
-    public void testIsValidAddress_With_InvalidAddress_NoAt(){
+    public void testIsValidAddress_With_InvalidAddress_NoAt() {
         Assertions.assertFalse(emailClient.isValidAddress("tfmcesar.school"));
     }
 
     @Test
-    public void testIsValidAddress_With_InvalidAddress_TwoAts(){
+    public void testIsValidAddress_With_InvalidAddress_TwoAts() {
         Assertions.assertFalse(emailClient.isValidAddress("tfm@cesa@r.school"));
     }
 
     @Test
-    public void testIsValidEmail_With_ValidEmail(){
+    public void testIsValidAddressCollection_With_ValidCollection() {
+        to = new ArrayList<String>();
+        ((ArrayList<String>) to).add("aaa@cesar.school");
+        ((ArrayList<String>) to).add("aaaa@cesar.school");
+        ((ArrayList<String>) to).add("aaaaa@cesar.school");
+
+        Assertions.assertTrue(emailClient.isValidAddress(to));
+    }
+
+    @Test
+    public void testIsValidAddressCollection_With_InvalidCollection() {
+        to = new ArrayList<String>();
+        ((ArrayList<String>) to).add("aaa@cesar.school");
+        ((ArrayList<String>) to).add("aaaa*@cesar.school");
+        ((ArrayList<String>) to).add("aaaaa@cesar.school");
+
+        Assertions.assertFalse(emailClient.isValidAddress(to));
+    }
+
+    @Test
+    public void testIsValidEmail_With_ValidEmail() {
         to = new ArrayList<String>();
         ((ArrayList<String>) to).add("aaa@cesar.school");
         ((ArrayList<String>) to).add("aaaa@cesar.school");
@@ -173,7 +134,7 @@ public class EmailClientTest {
     }
 
     @Test
-    public void testIsValidEmail_With_InvalidEmail_NoCc_NoBcc(){
+    public void testIsValidEmail_With_InvalidEmail_NoCc_NoBcc() {
         to = new ArrayList<String>();
         ((ArrayList<String>) to).add("aaa@cesar.school");
         ((ArrayList<String>) to).add("aaaa@cesar.school");
@@ -194,7 +155,7 @@ public class EmailClientTest {
     }
 
     @Test
-    public void testIsValidEmail_With_InvalidEmail_NoCreationDate(){
+    public void testIsValidEmail_With_InvalidEmail_NoCreationDate() {
         to = new ArrayList<String>();
         ((ArrayList<String>) to).add("aaa@cesar.school");
         ((ArrayList<String>) to).add("aaaa@cesar.school");
@@ -217,7 +178,7 @@ public class EmailClientTest {
     }
 
     @Test
-    public void testIsValidEmail_With_InvalidEmail_InvalidFrom(){
+    public void testIsValidEmail_With_InvalidEmail_InvalidFrom() {
         to = new ArrayList<String>();
         ((ArrayList<String>) to).add("aaa@cesar.school");
         ((ArrayList<String>) to).add("aaaa@cesar.school");
@@ -241,7 +202,7 @@ public class EmailClientTest {
     }
 
     @Test
-    public void testIsValidEmail_With_InvalidEmail_InvalidTo(){
+    public void testIsValidEmail_With_InvalidEmail_InvalidTo() {
         to = new ArrayList<String>();
         ((ArrayList<String>) to).add("aaa@cesar.school");
         ((ArrayList<String>) to).add("aaa*a@cesar.school");
@@ -265,7 +226,7 @@ public class EmailClientTest {
     }
 
     @Test
-    public void testIsValidEmail_With_InvalidEmail_InvalidCc(){
+    public void testIsValidEmail_With_InvalidEmail_InvalidCc() {
         to = new ArrayList<String>();
         ((ArrayList<String>) to).add("aaa@cesar.school");
         ((ArrayList<String>) to).add("aaaa@cesar.school");
@@ -289,7 +250,7 @@ public class EmailClientTest {
     }
 
     @Test
-    public void testIsValidEmail_With_InvalidEmail_InvalidBcc(){
+    public void testIsValidEmail_With_InvalidEmail_InvalidBcc() {
         to = new ArrayList<String>();
         ((ArrayList<String>) to).add("aaa@cesar.school");
         ((ArrayList<String>) to).add("aaaa@cesar.school");
@@ -312,66 +273,17 @@ public class EmailClientTest {
         Assertions.assertFalse(emailClient.isValidEmail(email));
     }
 
-
-    //todo
     @Test
-    public void testIsValidAddressCollection_With_ValidCollection(){
-        to = new ArrayList<String>();
-        ((ArrayList<String>) to).add("aaa@cesar.school");
-        ((ArrayList<String>) to).add("aaaa@cesar.school");
-        ((ArrayList<String>) to).add("aaaaa@cesar.school");
-    }
-    //todo
-    @Test
-    public void testIsValidAddressCollection_With_InvalidCollection(){
-        to = new ArrayList<String>();
-        ((ArrayList<String>) to).add("aaa*@cesar.school");
-        ((ArrayList<String>) to).add("aaaa*@cesar.school");
-        ((ArrayList<String>) to).add("aaaaa@cesar.school");
-    }
-
-    /*
-    @Test
-    public void testEmailList_With_ValidPassword(){
-        EmailAccount account = new EmailAccountBuilder()
-                .setUser("tfm")
-                .setDomain("cesar.school")
+    public void createAccount_With_ValidAccount(){
+        emailAccount = new EmailAccountBuilder()
+                .setUser("user")
+                .setDomain("domain")
                 .setPassword("password")
                 .setLastPasswordUpdate(Instant.now())
                 .build();
-        Assertions.assertEquals(2, emailServiceStub.emailList(account).size());
-    }
 
-    @Test
-    public void testEmailList_With_InvalidPassword(){
-        EmailAccount account = new EmailAccountBuilder()
-                .setUser("tfm")
-                .setDomain("cesar.school")
-                .setPassword("password")
-                .setLastPasswordUpdate(Instant.now().minus(Duration.ofDays(100)))
-                .build();
-        Assertions.assertThrows(RuntimeException.class, () -> {emailServiceStub.emailList(account);;});
-    }
+        Assertions.assertTrue(emailClient.createAccount(emailAccount));
 
-    @Test
-    public void testSendEmail_ValidEmail(){
-        Email validEmail = new EmailBuilder()
-                .setCreationDate(Instant.now())
-                .setFrom("tfm@cesar.school")
-                .setTo(to)
-                .setSubject("This is a Subject")
-                .setMessage("This is the body of the message.")
-                .build();
-
-        accounts.add(new EmailAccountBuilder()
-                        .setUser("tfm")
-                        .setDomain("cesar.school")
-                        .setPassword("password")
-                        .setLastPasswordUpdate(Instant.now())
-                        .build());
-
-        //emailClient = new EmailClient(accounts, emailServiceStub);
 
     }
-    */
 }

@@ -13,7 +13,10 @@ public class EmailBuilder {
     private String subject;
     private String message;
 
-    public EmailBuilder(){};
+    public EmailBuilder() {
+    }
+
+    ;
 
     public EmailBuilder setCreationDate(Instant creationDate) {
         this.creationDate = creationDate;
@@ -50,7 +53,7 @@ public class EmailBuilder {
         return this;
     }
 
-    public Email build(){
-        return new Email(creationDate,from, to, cc, bcc,subject, message);
+    public Email build() {
+        return new Email(creationDate, from, to, cc, bcc, subject, message);
     }
 }

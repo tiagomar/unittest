@@ -2,9 +2,6 @@ package school.cesar.unit;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
-import java.util.Calendar;
-
-import static java.time.temporal.ChronoUnit.DAYS;
 
 
 public class EmailAccount {
@@ -13,7 +10,7 @@ public class EmailAccount {
     private String password;
     private Instant lastPasswordUpdate;
 
-    public EmailAccount(String user,String domain,String password,Instant lastPasswordUpdate){
+    public EmailAccount(String user, String domain, String password, Instant lastPasswordUpdate) {
         this.user = user;
         this.domain = domain;
         this.password = password;
@@ -53,12 +50,16 @@ public class EmailAccount {
         this.lastPasswordUpdate = lastPasswordUpdate;
     }
 
-    public boolean isPasswordValid(String password, Instant lastPasswordUpdate){
-        return password.length() >= 6 && verifyPasswordExpiration(lastPasswordUpdate);
+    public boolean isPasswordValid(String password, Instant lastPasswordUpdate) {
+        return isPasswordLongerThanSixCharacters(password) && verifyPasswordExpiration(lastPasswordUpdate);
     }
 
-    public boolean verifyPasswordExpiration(Instant lastPasswordUpdate){
-         return daysSinceLastPasswordUpdate(lastPasswordUpdate) <= 90;
+    public boolean isPasswordLongerThanSixCharacters(String password){
+        return password.length() >= 6;
+    }
+
+    public boolean verifyPasswordExpiration(Instant lastPasswordUpdate) {
+        return daysSinceLastPasswordUpdate(lastPasswordUpdate) <= 90;
     }
 
     public long daysSinceLastPasswordUpdate(Instant lastPasswordUpdate) {

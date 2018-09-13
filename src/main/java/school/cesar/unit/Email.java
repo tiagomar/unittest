@@ -12,7 +12,7 @@ public class Email {
     private String subject;
     private String message;
 
-    public Email(Instant creationDate,String from,Collection<String> to,Collection<String> cc,Collection<String> bcc,String subject,String message){
+    public Email(Instant creationDate, String from, Collection<String> to, Collection<String> cc, Collection<String> bcc, String subject, String message) {
         this.creationDate = creationDate;
         this.from = from;
         this.to = to;
