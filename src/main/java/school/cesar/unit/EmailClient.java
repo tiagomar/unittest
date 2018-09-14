@@ -1,13 +1,14 @@
 package school.cesar.unit;
 
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.Collection;
 
 
 public class EmailClient {
 
     private EmailService emailService;
-    private static Collection<EmailAccount> accounts;
+
 
 
     public void setEmailService(EmailService emailService) {
@@ -109,6 +110,7 @@ public class EmailClient {
     - adcionar objeto a coleção accounts
      */
     public boolean createAccount(EmailAccount account) {
+        Collection<EmailAccount> accounts = new ArrayList<EmailAccount>();
         if(isValidUser(account.getUser())){
             if(isValidDomain(account.getDomain())){
                 if(account.isPasswordLongerThanSixCharacters(account.getPassword())){

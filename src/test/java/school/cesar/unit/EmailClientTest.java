@@ -286,4 +286,18 @@ public class EmailClientTest {
 
 
     }
+
+    @Test
+    public void createAccount_With_InvalidAccount(){
+        emailAccount = new EmailAccountBuilder()
+                .setUser("user")
+                .setDomain("domain")
+                .setPassword("pass")
+                .setLastPasswordUpdate(Instant.now())
+                .build();
+
+        Assertions.assertFalse(emailClient.createAccount(emailAccount));
+
+
+    }
 }
