@@ -1,0 +1,15 @@
+
+>school.cesar.unit.EmailClient#isValidUser(Ljava/lang/String;)Z
+__unknown_file (user"1*Ñ
+1L
+BC:\repos\unittest\src\main\java\school\cesar\unit\EmailClient.java (¥
+¢
+L
+BC:\repos\unittest\src\main\java\school\cesar\unit\EmailClient.java (.
+%0"-java.lang.String#matches(Ljava/lang/String;)Z*
+
+user*
+[a-zA-Z0-9._-]+"V
+L
+BC:\repos\unittest\src\main\java\school\cesar\unit\EmailClient.java (/
+""

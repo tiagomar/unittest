@@ -1,0 +1,33 @@
+
+@school.cesar.unit.EmailClient#isValidDomain(Ljava/lang/String;)Z
+__unknown_file (domain"3*Þ
+1L
+BC:\repos\unittest\src\main\java\school\cesar\unit\EmailClient.java (²
+¯
+L
+BC:\repos\unittest\src\main\java\school\cesar\unit\EmailClient.java (?
+%1"-java.lang.String#matches(Ljava/lang/String;)Z*
+
+
+domain*
+^(?!\\.)[a-zA-Z0-9.]*[^.]$"V
+L
+BC:\repos\unittest\src\main\java\school\cesar\unit\EmailClient.java (@
+""*©
+2L
+BC:\repos\unittest\src\main\java\school\cesar\unit\EmailClient.java ("V
+L
+BC:\repos\unittest\src\main\java\school\cesar\unit\EmailClient.java (
+""*ý
+3L
+BC:\repos\unittest\src\main\java\school\cesar\unit\EmailClient.java (¡
+ž
+L
+BC:\repos\unittest\src\main\java\school\cesar\unit\EmailClient.java (!
+%0"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*
+
+
+domain*
+..*
+2
+1

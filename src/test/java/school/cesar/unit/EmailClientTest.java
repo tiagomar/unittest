@@ -7,8 +7,6 @@ import org.junit.jupiter.api.Test;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
 
 public class EmailClientTest {
     private static Collection<String> to;
@@ -274,7 +272,7 @@ public class EmailClientTest {
     }
 
     @Test
-    public void createAccount_With_ValidAccount(){
+    public void createAccount_With_ValidAccount() {
         emailAccount = new EmailAccountBuilder()
                 .setUser("user")
                 .setDomain("domain")
@@ -288,7 +286,7 @@ public class EmailClientTest {
     }
 
     @Test
-    public void createAccount_With_InvalidAccount(){
+    public void createAccount_With_InvalidAccount() {
         emailAccount = new EmailAccountBuilder()
                 .setUser("user")
                 .setDomain("domain")

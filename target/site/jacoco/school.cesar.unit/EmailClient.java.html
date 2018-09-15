@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EmailClient.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">unit-test</a> &gt; <a href="index.source.html" class="el_package">school.cesar.unit</a> &gt; <span class="el_source">EmailClient.java</span></div><h1>EmailClient.java</h1><pre class="source lang-java linenums">package school.cesar.unit;
+
+import java.time.Instant;
+import java.util.ArrayList;
+import java.util.Collection;
+
+
+<span class="fc" id="L8">public class EmailClient {</span>
+
+    private EmailService emailService;
+
+
+
+    public void setEmailService(EmailService emailService) {
+<span class="fc" id="L15">        this.emailService = emailService;</span>
+<span class="fc" id="L16">    }</span>
+
+
+    public boolean isValidUser(String user) {
+<span class="fc" id="L20">        return user.matches(&quot;[a-zA-Z0-9._-]+&quot;);</span>
+    }
+
+    public boolean isValidDomain(String domain) {
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        if (domain.contains(&quot;..&quot;)) {</span>
+<span class="fc" id="L25">            return false;</span>
+        } else {
+<span class="fc" id="L27">            return domain.matches(&quot;^(?!\\.)[a-zA-Z0-9.]*[^.]$&quot;);</span>
+        }
+    }
+
+    /*
+    Um endereço é considerado válido se possuir usuário válido,
+    seguido pelo caractere arroba (@) e posteriormente um domínio válido.
+    */
+    public boolean isValidAddress(String emailAddress) {
+<span class="fc" id="L36">        String[] parts = emailAddress.split(&quot;@&quot;);</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        if (emailAddress.split(&quot;@&quot;).length == 2) {</span>
+<span class="fc" id="L38">            String user = emailAddress.split(&quot;@&quot;)[0];</span>
+<span class="fc" id="L39">            String domain = emailAddress.split(&quot;@&quot;)[1];</span>
+
+<span class="fc bfc" id="L41" title="All 4 branches covered.">            return isValidUser(user) &amp;&amp; isValidDomain(domain);</span>
+
+        } else {
+<span class="fc" id="L44">            return false;</span>
+        }
+    }
+
+    public boolean isValidAddress(Collection&lt;String&gt; emailAddresses) {
+<span class="fc" id="L49">        boolean flag = true;</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">        for (String emailAddress : emailAddresses) {</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">            if (!isValidAddress(emailAddress)) {</span>
+<span class="fc" id="L52">                flag = false;</span>
+            }
+<span class="fc" id="L54">        }</span>
+<span class="fc" id="L55">        return flag;</span>
+    }
+
+    /*
+    É considerado válido o email que possuir um creationDate,
+    um destinatário (to) válido, ao menos um emissor (from) válido
+    e os demais e-mails também sejam válidos
+    */
+    public boolean isValidEmail(Email email) {
+<span class="fc bfc" id="L64" title="All 2 branches covered.">        if (email.getCreationDate() != null) {</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">            if (isValidAddress(email.getFrom())) {</span>
+<span class="pc bpc" id="L66" title="1 of 4 branches missed.">                if (email.getTo().size() != 0 &amp;&amp; isValidAddress(email.getTo())) {</span>
+<span class="fc bfc" id="L67" title="All 4 branches covered.">                    if (email.getCc().size() != 0 &amp;&amp; !isValidAddress(email.getCc())) {</span>
+<span class="fc" id="L68">                        return false;</span>
+                    }
+<span class="fc bfc" id="L70" title="All 4 branches covered.">                    if (email.getBcc().size() != 0 &amp;&amp; !isValidAddress(email.getBcc())) {</span>
+<span class="fc" id="L71">                        return false;</span>
+                    }
+<span class="fc" id="L73">                } else return false;</span>
+<span class="fc" id="L74">            } else return false;</span>
+<span class="fc" id="L75">        } else return false;</span>
+<span class="fc" id="L76">        return true;</span>
+    }
+
+    /*
+    - Antes de obter emails verificar se password é válido
+      (password é valido se maior que 6 caracteres e lastPasswordUpdate menor ou igual a 90 dias)
+    - Se password inválido levantar uma exeção do tipo RuntimeException
+    - Chamar emailService.emailList(account)
+    */
+    public Collection&lt;Email&gt; emailList(EmailAccount emailAccount) {
+<span class="fc bfc" id="L86" title="All 2 branches covered.">        if (emailAccount.isPasswordValid(emailAccount.getPassword(), emailAccount.getLastPasswordUpdate())) {</span>
+<span class="fc" id="L87">            return emailService.emailList(emailAccount);</span>
+        } else {
+<span class="fc" id="L89">            throw new RuntimeException(&quot;Password is expired!&quot;);</span>
+        }
+    }
+
+    /*
+    - verifica se o email é válido (utilizando o método isValidEmail)
+    - chamar emailService.sendEmail(Email email)
+    - Se retorno false levantar uma exeção do tipo `RuntimeException
+     */
+    public void sendEmail(Email email) {
+<span class="fc bfc" id="L99" title="All 2 branches covered.">        if (isValidEmail(email)) {</span>
+<span class="fc" id="L100">            emailService.sendEmail(email);</span>
+        } else {
+<span class="fc" id="L102">            throw new RuntimeException(&quot;Email is not valid.&quot;);</span>
+        }
+<span class="fc" id="L104">    }</span>
+
+    /*
+    - verifica se o usuário e o dominio são válidos
+    - verifica se o password é maior que 6 caracteres
+    - adiciona data atual ao lastPasswordUpdate
+    - adcionar objeto a coleção accounts
+     */
+    public boolean createAccount(EmailAccount account) {
+<span class="fc" id="L113">        Collection&lt;EmailAccount&gt; accounts = new ArrayList&lt;EmailAccount&gt;();</span>
+<span class="pc bpc" id="L114" title="1 of 2 branches missed.">        if(isValidUser(account.getUser())){</span>
+<span class="pc bpc" id="L115" title="1 of 2 branches missed.">            if(isValidDomain(account.getDomain())){</span>
+<span class="fc bfc" id="L116" title="All 2 branches covered.">                if(account.isPasswordLongerThanSixCharacters(account.getPassword())){</span>
+<span class="fc" id="L117">                    account.setLastPasswordUpdate(Instant.now());</span>
+<span class="fc" id="L118">                    return accounts.add(account);</span>
+<span class="fc" id="L119">                } else return false;</span>
+<span class="nc" id="L120">            } else return false;</span>
+<span class="nc" id="L121">        } else return false;</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

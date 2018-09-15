@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -40,7 +41,7 @@ public class EmailAccountTest {
     }
 
     @Test
-    public void isPasswordLongerThanSixCharacters_With_SixCharacters(){
+    public void isPasswordLongerThanSixCharacters_With_SixCharacters() {
         emailAccount = new EmailAccountBuilder()
                 .setPassword("123456")
                 .build();
@@ -48,7 +49,7 @@ public class EmailAccountTest {
     }
 
     @Test
-    public void isPasswordLongerThanSixCharacters_With_LessThanSixCharacters(){
+    public void isPasswordLongerThanSixCharacters_With_LessThanSixCharacters() {
         emailAccount = new EmailAccountBuilder()
                 .setPassword("12345")
                 .build();
@@ -78,17 +79,33 @@ public class EmailAccountTest {
         expirationCheck = false;
         Assertions.assertFalse(emailAccountStub.isPasswordValid("12345", Instant.now()));
     }
-
+/*
     @Test
-    public void checkVerifyPasswordExpiration_With_NotExpiredPassword() {
+    public void checkVerifyPasswordExpiration_With_NotExpiredPassword_Stub() {
         days = 90;
         Assertions.assertTrue(emailAccountStub.verifyPasswordExpiration(lastPasswordUpdate));
     }
 
     @Test
-    public void checkVerifyPasswordExpiration_With_ExpiredPassword() {
+    public void checkVerifyPasswordExpiration_With_ExpiredPassword_Stub() {
         days = 91;
-        Assertions.assertTrue(!emailAccountStub.verifyPasswordExpiration(lastPasswordUpdate));
+        Assertions.assertFalse(emailAccountStub.verifyPasswordExpiration(lastPasswordUpdate));
+    }
+*/
+    @Test
+    public void verifyPasswordExpiration_NotExpired(){
+        emailAccount = new EmailAccountBuilder()
+                .setLastPasswordUpdate(Instant.now().minus(1,ChronoUnit.DAYS))
+                .build();
+        Assertions.assertTrue(emailAccount.verifyPasswordExpiration(emailAccount.getLastPasswordUpdate()));
+    }
+
+    @Test
+    public void verifyPasswordExpiration_Expired(){
+        emailAccount = new EmailAccountBuilder()
+                .setLastPasswordUpdate(Instant.now().minus(100,ChronoUnit.DAYS))
+                .build();
+        Assertions.assertFalse(emailAccount.verifyPasswordExpiration(emailAccount.getLastPasswordUpdate()));
     }
 
     @Test

@@ -1,0 +1,15 @@
+
+Uschool.cesar.unit.EmailAccount#isPasswordLongerThanSixCharacters(Ljava/lang/String;)Z
+__unknown_file (password"1*Ø
+1M
+CC:\repos\unittest\src\main\java\school\cesar\unit\EmailAccount.java: :(Å
+
+M
+CC:\repos\unittest\src\main\java\school\cesar\unit\EmailAccount.java: :( 
+%0"java.lang.String#length()I*
+
+
+password"W
+M
+CC:\repos\unittest\src\main\java\school\cesar\unit\EmailAccount.java: :(&
+""

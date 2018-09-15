@@ -10,5 +10,8 @@
         <module name="unittest" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mocking" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
