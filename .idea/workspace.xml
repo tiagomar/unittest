@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e864f36-2ea2-418c-b240-568f740a776d" name="Default" comment="Unused variable deleted">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/school/cesar/unit/EmailAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/school/cesar/unit/EmailAccountTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/school/cesar/unit/EmailClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/school/cesar/unit/EmailClientTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="6e864f36-2ea2-418c-b240-568f740a776d" name="Default" comment="Unused variable deleted" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/mocking/target/" />
@@ -36,7 +28,7 @@
     <SUITE FILE_PATH="coverage/unittest$FieldsValidationTest.ic" NAME="FieldsValidationTest Coverage Results" MODIFIED="1536387436656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>school.cesar.unit.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/unittest$school_cesar_unit_in_unit_test.ic" NAME="school.cesar.unit in unit-test Coverage Results" MODIFIED="1537041995114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/unittest$school_cesar_unit_in_unit_test.ic" NAME="school.cesar.unit in unit-test Coverage Results" MODIFIED="1537042712623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>school.cesar.unit.*</FILTER>
     </SUITE>
   </component>
@@ -264,6 +256,24 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="unit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="unittest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unittest" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="unittest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unittest" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="unittest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unittest" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="jacoco" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -503,12 +513,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EmailAccountTest_verifyPasswordExpiration_NotExpired - 2018.09.15 at 14h 04m 47s.xml">
-      <configuration name="EmailAccountTest.verifyPasswordExpiration_NotExpired" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmailAccountTest_verifyPasswordExpiration_NotExpired - 2018.09.15 at 14h 08m 42s.xml">
-      <configuration name="EmailAccountTest.verifyPasswordExpiration_NotExpired" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="EmailAccountTest_verifyPasswordExpiration_NotExpired - 2018.09.15 at 14h 09m 40s.xml">
       <configuration name="EmailAccountTest.verifyPasswordExpiration_NotExpired" configurationId="JUnit" />
     </history-entry>
@@ -533,25 +537,31 @@
     <history-entry file="EmailClientTest - 2018.09.15 at 15h 45m 56s.xml">
       <configuration name="EmailClientTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="school_cesar_unit_in_unit-test - 2018.09.15 at 17h 06m 37s.xml">
+      <configuration name="school.cesar.unit in unit-test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="school_cesar_unit_in_unit-test - 2018.09.15 at 17h 18m 35s.xml">
+      <configuration name="school.cesar.unit in unit-test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info active="true" anchor="bottom" id="Messages" order="0" visible="true" weight="0.29867986" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.29867986" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.41581258" side_tool="true" weight="0.5166932" />
-      <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.49610388" visible="true" weight="0.17549168" />
+      <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.4935065" visible="true" weight="0.17549168" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.32838285" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.5841874" weight="0.36468646" />
-      <window_info anchor="right" id="Coverage" order="3" sideWeight="0.5038961" side_tool="true" weight="0.46747354" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.5841874" visible="true" weight="0.36468646" />
+      <window_info anchor="right" id="Coverage" order="3" sideWeight="0.5064935" side_tool="true" visible="true" weight="0.17549168" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32838285" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49174917" visible="true" weight="0.20877458" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49174917" visible="true" weight="0.20877458" />
       <window_info id="Structure" order="6" sideWeight="0.50825083" side_tool="true" weight="0.1913767" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="1" />

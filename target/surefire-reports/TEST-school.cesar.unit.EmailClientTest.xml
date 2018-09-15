@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="school.cesar.unit.EmailClientTest" time="0.011" tests="23" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="school.cesar.unit.EmailClientTest" time="0.001" tests="23" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="BR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\tiago\AppData\Local\Temp\surefire1693466176878672986\surefirebooter5761518004508730657.jar C:\Users\tiago\AppData\Local\Temp\surefire1693466176878672986 2018-09-15T15-01-53_899-jvmRun1 surefire5174723003929185354tmp surefire_02956716796194967434tmp"/>
+    <property name="sun.java.command" value="C:\Users\tiago\AppData\Local\Temp\surefire2758122334186499804\surefirebooter3976280172298766460.jar C:\Users\tiago\AppData\Local\Temp\surefire2758122334186499804 2018-09-15T17-19-21_378-jvmRun1 surefire3743945140339033627tmp surefire_06982230602069880959tmp"/>
     <property name="surefire.test.class.path" value="C:\repos\unittest\target\test-classes;C:\repos\unittest\target\classes;C:\Users\tiago\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.2.0\junit-jupiter-engine-5.2.0.jar;C:\Users\tiago\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\tiago\.m2\repository\org\junit\platform\junit-platform-engine\1.2.0\junit-platform-engine-1.2.0.jar;C:\Users\tiago\.m2\repository\org\junit\platform\junit-platform-commons\1.2.0\junit-platform-commons-1.2.0.jar;C:\Users\tiago\.m2\repository\org\opentest4j\opentest4j\1.1.0\opentest4j-1.1.0.jar;C:\Users\tiago\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.2.0\junit-jupiter-api-5.2.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\tiago"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\tiago\AppData\Local\Temp\surefire1693466176878672986\surefirebooter5761518004508730657.jar;C:\\Users\\tiago\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.2\\org.jacoco.agent-0.8.2-runtime.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\tiago\AppData\Local\Temp\surefire2758122334186499804\surefirebooter3976280172298766460.jar;C:\\Users\\tiago\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.2\\org.jacoco.agent-0.8.2-runtime.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_181\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -70,7 +70,7 @@
   <testcase name="testIsValidEmail_With_ValidEmail" classname="school.cesar.unit.EmailClientTest" time="0"/>
   <testcase name="testIsValidAddressCollection_With_InvalidCollection" classname="school.cesar.unit.EmailClientTest" time="0"/>
   <testcase name="validateUserShouldReturnFalseForInvalidUser" classname="school.cesar.unit.EmailClientTest" time="0"/>
-  <testcase name="testIsValidAddress_With_InvalidUser_InvalidDomain" classname="school.cesar.unit.EmailClientTest" time="0"/>
+  <testcase name="testIsValidAddress_With_InvalidUser_InvalidDomain" classname="school.cesar.unit.EmailClientTest" time="0.001"/>
   <testcase name="testIsValidAddress_With_ValidUser_InvalidDomain" classname="school.cesar.unit.EmailClientTest" time="0"/>
   <testcase name="createAccount_With_InvalidAccount" classname="school.cesar.unit.EmailClientTest" time="0"/>
   <testcase name="testIsValidAddress_With_InvalidUser_ValidDomain" classname="school.cesar.unit.EmailClientTest" time="0"/>
@@ -78,10 +78,10 @@
   <testcase name="testIsValidEmail_With_InvalidEmail_InvalidTo" classname="school.cesar.unit.EmailClientTest" time="0"/>
   <testcase name="testIsValidEmail_With_InvalidEmail_InvalidFrom" classname="school.cesar.unit.EmailClientTest" time="0"/>
   <testcase name="validateUserShouldReturnTrueForValidDomain" classname="school.cesar.unit.EmailClientTest" time="0"/>
-  <testcase name="validateUserShouldReturnFalseForInvalidDomain_PeriodAsFirstCharacter" classname="school.cesar.unit.EmailClientTest" time="0.001"/>
-  <testcase name="testIsValidAddressCollection_With_ValidCollection" classname="school.cesar.unit.EmailClientTest" time="0.001"/>
-  <testcase name="validateUserShouldReturnFalseForInvalidDomain_PeriodAsLastCharacter" classname="school.cesar.unit.EmailClientTest" time="0.001"/>
+  <testcase name="validateUserShouldReturnFalseForInvalidDomain_PeriodAsFirstCharacter" classname="school.cesar.unit.EmailClientTest" time="0"/>
+  <testcase name="testIsValidAddressCollection_With_ValidCollection" classname="school.cesar.unit.EmailClientTest" time="0"/>
+  <testcase name="validateUserShouldReturnFalseForInvalidDomain_PeriodAsLastCharacter" classname="school.cesar.unit.EmailClientTest" time="0"/>
   <testcase name="testIsValidAddress_With_InvalidAddress_TwoAts" classname="school.cesar.unit.EmailClientTest" time="0"/>
   <testcase name="testIsValidAddress_With_ValidAddress" classname="school.cesar.unit.EmailClientTest" time="0"/>
-  <testcase name="testIsValidAddress_With_InvalidAddress_NoAt" classname="school.cesar.unit.EmailClientTest" time="0.001"/>
+  <testcase name="testIsValidAddress_With_InvalidAddress_NoAt" classname="school.cesar.unit.EmailClientTest" time="0"/>
 </testsuite>
