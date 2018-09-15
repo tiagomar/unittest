@@ -33,7 +33,6 @@ public class EmailClient {
     seguido pelo caractere arroba (@) e posteriormente um domínio válido.
     */
     public boolean isValidAddress(String emailAddress) {
-        String[] parts = emailAddress.split("@");
         if (emailAddress.split("@").length == 2) {
             String user = emailAddress.split("@")[0];
             String domain = emailAddress.split("@")[1];
