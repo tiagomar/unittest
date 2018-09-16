@@ -28,3 +28,20 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+target/jacoco.exec
+target/jacoco.exec
+target/site/jacoco/index.html
+target/site/jacoco/jacoco-sessions.html
+target/site/jacoco/jacoco.csv
+target/site/jacoco/jacoco.xml
+target/site/jacoco/school.cesar.unit/EmailAccount.html
+target/site/jacoco/school.cesar.unit/EmailAccount.java.html
+target/site/jacoco/school.cesar.unit/index.html
+target/site/jacoco/school.cesar.unit/index.source.html
+target/sonar/report-task.txt
+target/sonar/ucfg/java/ucfg_27.proto
+target/surefire-reports/school.cesar.unit.EmailAccountTest.txt
+target/surefire-reports/school.cesar.unit.EmailClientTest.txt
+target/surefire-reports/TEST-school.cesar.unit.EmailAccountTest.xml
+target/surefire-reports/TEST-school.cesar.unit.EmailClientTest.xml
+target/surefire-reports/TEST-school.cesar.unit.EmailServiceTest.xml
