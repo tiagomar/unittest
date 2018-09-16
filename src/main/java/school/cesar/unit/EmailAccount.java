@@ -64,7 +64,6 @@ public class EmailAccount {
 
     public long daysSinceLastPasswordUpdate(Instant lastPasswordUpdate) {
         Instant currentInstant = Instant.now();
-        long numberOfDays = ChronoUnit.DAYS.between(lastPasswordUpdate, currentInstant);
-        return numberOfDays;
+        return ChronoUnit.DAYS.between(lastPasswordUpdate, currentInstant);
     }
 }

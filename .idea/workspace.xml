@@ -3,90 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6e864f36-2ea2-418c-b240-568f740a776d" name="Default" comment="Unused variable deleted">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/school/cesar/unit/EmailClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/school/cesar/unit/EmailClientTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/branchfc.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/branchnc.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/branchpc.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/bundle.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/class.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/down.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/greenbar.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/group.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/method.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/package.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/prettify.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/prettify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/redbar.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/report.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/report.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/session.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/sort.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/sort.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/source.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/up.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/school.cesar.unit/Email.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/school.cesar.unit/Email.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/school.cesar.unit/EmailAccount.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/school.cesar.unit/EmailAccount.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/school.cesar.unit/EmailClient.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/school.cesar.unit/EmailClient.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/school.cesar.unit/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/school.cesar.unit/index.source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/.sonar_lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/report-task.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_0.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_1.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_10.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_11.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_12.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_13.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_14.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_15.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_16.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_17.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_18.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_19.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_2.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_20.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_21.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_22.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_23.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_24.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_25.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_26.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_27.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_28.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_29.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_3.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_30.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_31.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_32.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_33.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_34.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_35.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_36.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_4.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_5.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_6.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_7.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_8.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sonar/ucfg/java/ucfg_9.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-school.cesar.unit.EmailAccountTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-school.cesar.unit.EmailClientTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-school.cesar.unit.EmailServiceTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/school.cesar.unit.EmailAccountTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/school.cesar.unit.EmailClientTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/school.cesar.unit.EmailServiceTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sonar/report-task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/sonar/report-task.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -117,7 +36,7 @@
     <SUITE FILE_PATH="coverage/unittest$FieldsValidationTest.ic" NAME="FieldsValidationTest Coverage Results" MODIFIED="1536387436656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>school.cesar.unit.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/unittest$school_cesar_unit_in_unit_test.ic" NAME="school.cesar.unit in unit-test Coverage Results" MODIFIED="1537062782143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/unittest$school_cesar_unit_in_unit_test.ic" NAME="school.cesar.unit in unit-test Coverage Results" MODIFIED="1537064062118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>school.cesar.unit.*</FILTER>
     </SUITE>
   </component>
@@ -168,6 +87,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="EmailAccount.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailAccount.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1403#1404#0" expanded="true" />
+                <element signature="e#1448#1449#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="EmailClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailClient.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -180,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmailClientTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EmailClientTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/school/cesar/unit/EmailClientTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="224" column="4" selection-start-line="224" selection-start-column="4" selection-end-line="224" selection-end-column="4" />
+            <state relative-caret-position="119">
+              <caret line="228" column="10" selection-start-line="228" selection-start-column="10" selection-end-line="228" selection-end-column="10" />
               <folding>
                 <element signature="method#validateUserShouldReturnTrueForValidUser#0;class#EmailClientTest#0" />
                 <element signature="method#validateUserShouldReturnFalseForInvalidUser#0;class#EmailClientTest#0" />
@@ -259,7 +192,6 @@
         <option value="$PROJECT_DIR$/src/test/java/school/cesar/unit/EmailAccountBuilder.java" />
         <option value="$PROJECT_DIR$/src/test/java/school/cesar/unit/FieldsValidationTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailAccount.java" />
         <option value="$PROJECT_DIR$/src/test/java/school/cesar/unit/EmailServiceTest.java" />
         <option value="$PROJECT_DIR$/mocking/pom.xml" />
         <option value="$PROJECT_DIR$/mocking/src/test/java/school/cesar/unit/MockitoExtension.java" />
@@ -267,6 +199,7 @@
         <option value="$PROJECT_DIR$/src/test/java/school/cesar/unit/EmailAccountTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailClient.java" />
         <option value="$PROJECT_DIR$/src/test/java/school/cesar/unit/EmailClientTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailAccount.java" />
       </list>
     </option>
   </component>
@@ -406,29 +339,6 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="EmailAccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="unit-test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="school.cesar.unit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="school.cesar.unit" />
-      <option name="MAIN_CLASS_NAME" value="school.cesar.unit.EmailAccountTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
     <configuration name="EmailClientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="unit-test" />
       <extension name="coverage">
@@ -488,6 +398,29 @@
       <option name="PACKAGE_NAME" value="school.cesar.unit" />
       <option name="MAIN_CLASS_NAME" value="school.cesar.unit.EmailClientTest" />
       <option name="METHOD_NAME" value="testIsValidEmail_With_InvalidEmail_NoCreationDate" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="EmailClientTest.testIsValidEmail_With_InvalidEmail_NoTo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="unit-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="school.cesar.unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="school.cesar.unit" />
+      <option name="MAIN_CLASS_NAME" value="school.cesar.unit.EmailClientTest" />
+      <option name="METHOD_NAME" value="testIsValidEmail_With_InvalidEmail_NoTo" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -571,18 +504,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.school.cesar.unit in unit-test" />
-      <item itemvalue="JUnit.EmailAccountTest" />
       <item itemvalue="JUnit.EmailClientTest" />
       <item itemvalue="JUnit.EmailClientTest.testIsValidEmail_With_InvalidEmail_NoCreationDate" />
       <item itemvalue="JUnit.EmailClientTest.testIsValidEmail_With_InvalidEmail_InvalidFrom" />
+      <item itemvalue="JUnit.EmailClientTest.testIsValidEmail_With_InvalidEmail_NoTo" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.school.cesar.unit in unit-test" />
+        <item itemvalue="JUnit.EmailClientTest.testIsValidEmail_With_InvalidEmail_NoTo" />
         <item itemvalue="JUnit.EmailClientTest.testIsValidEmail_With_InvalidEmail_InvalidFrom" />
         <item itemvalue="JUnit.EmailClientTest.testIsValidEmail_With_InvalidEmail_NoCreationDate" />
         <item itemvalue="JUnit.EmailClientTest" />
-        <item itemvalue="JUnit.EmailAccountTest" />
       </list>
     </recent_temporary>
   </component>
@@ -608,21 +541,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EmailClientTest_testIsValidEmail_With_InvalidEmail_NoCreationDate - 2018.09.15 at 22h 06m 18s.xml">
-      <configuration name="EmailClientTest.testIsValidEmail_With_InvalidEmail_NoCreationDate" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmailClientTest_testIsValidEmail_With_InvalidEmail_NoCreationDate - 2018.09.15 at 22h 06m 30s.xml">
-      <configuration name="EmailClientTest.testIsValidEmail_With_InvalidEmail_NoCreationDate" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmailClientTest_testIsValidEmail_With_InvalidEmail_NoCreationDate - 2018.09.15 at 22h 09m 51s.xml">
-      <configuration name="EmailClientTest.testIsValidEmail_With_InvalidEmail_NoCreationDate" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmailClientTest_testIsValidEmail_With_InvalidEmail_NoCreationDate - 2018.09.15 at 22h 12m 19s.xml">
-      <configuration name="EmailClientTest.testIsValidEmail_With_InvalidEmail_NoCreationDate" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmailClientTest_testIsValidEmail_With_InvalidEmail_NoCreationDate - 2018.09.15 at 22h 13m 22s.xml">
-      <configuration name="EmailClientTest.testIsValidEmail_With_InvalidEmail_NoCreationDate" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="EmailClientTest_testIsValidEmail_With_InvalidEmail_NoCreationDate - 2018.09.15 at 22h 16m 44s.xml">
       <configuration name="EmailClientTest.testIsValidEmail_With_InvalidEmail_NoCreationDate" configurationId="JUnit" />
     </history-entry>
@@ -638,6 +556,21 @@
     <history-entry file="school_cesar_unit_in_unit-test - 2018.09.15 at 22h 48m 05s.xml">
       <configuration name="school.cesar.unit in unit-test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="school_cesar_unit_in_unit-test - 2018.09.15 at 22h 53m 04s.xml">
+      <configuration name="school.cesar.unit in unit-test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmailClientTest_testIsValidEmail_With_InvalidEmail_NoTo - 2018.09.15 at 23h 04m 16s.xml">
+      <configuration name="EmailClientTest.testIsValidEmail_With_InvalidEmail_NoTo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmailClientTest_testIsValidEmail_With_InvalidEmail_NoTo - 2018.09.15 at 23h 04m 54s.xml">
+      <configuration name="EmailClientTest.testIsValidEmail_With_InvalidEmail_NoTo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="school_cesar_unit_in_unit-test - 2018.09.15 at 23h 05m 19s.xml">
+      <configuration name="school.cesar.unit in unit-test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="school_cesar_unit_in_unit-test - 2018.09.15 at 23h 14m 23s.xml">
+      <configuration name="school.cesar.unit in unit-test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -650,10 +583,10 @@
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.41679275" side_tool="true" weight="0.36468646" />
-      <window_info active="true" anchor="right" id="Maven Projects" order="4" sideWeight="0.490099" visible="true" weight="0.23600605" />
+      <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.490099" visible="true" weight="0.23600605" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.32838285" />
       <window_info anchor="bottom" id="Run" order="6" sideWeight="0.58320725" visible="true" weight="0.33333334" />
-      <window_info anchor="right" id="Coverage" order="3" sideWeight="0.509901" side_tool="true" visible="true" weight="0.23600605" />
+      <window_info active="true" anchor="right" id="Coverage" order="3" sideWeight="0.509901" side_tool="true" visible="true" weight="0.23600605" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32838285" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
@@ -923,18 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1403#1404#0" expanded="true" />
-            <element signature="e#1448#1449#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -979,8 +900,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/school/cesar/unit/EmailClientTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="224" column="4" selection-start-line="224" selection-start-column="4" selection-end-line="224" selection-end-column="4" />
+        <state relative-caret-position="119">
+          <caret line="228" column="10" selection-start-line="228" selection-start-column="10" selection-end-line="228" selection-end-column="10" />
           <folding>
             <element signature="method#validateUserShouldReturnTrueForValidUser#0;class#EmailClientTest#0" />
             <element signature="method#validateUserShouldReturnFalseForInvalidUser#0;class#EmailClientTest#0" />
@@ -1002,6 +923,18 @@
             <element signature="method#testIsValidEmail_With_InvalidEmail_InvalidFrom#0;class#EmailClientTest#0" />
             <element signature="method#testIsValidEmail_With_InvalidEmail_InvalidCc#0;class#EmailClientTest#0" />
             <element signature="method#testIsValidEmail_With_InvalidEmail_InvalidBcc#0;class#EmailClientTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/school/cesar/unit/EmailAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1403#1404#0" expanded="true" />
+            <element signature="e#1448#1449#0" expanded="true" />
           </folding>
         </state>
       </provider>

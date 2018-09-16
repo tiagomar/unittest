@@ -222,7 +222,30 @@ public class EmailClientTest {
 
         Assertions.assertFalse(emailClient.isValidEmail(email));
     }
-    
+    @Test
+    public void testIsValidEmail_With_InvalidEmail_NoTo() {
+        to = new ArrayList<String>();
+        //((ArrayList<String>) to).add("aaa@cesar.school");
+        //((ArrayList<String>) to).add("aaaa@cesar.school");
+
+        cc = new ArrayList<String>();
+        ((ArrayList<String>) cc).add("bbb@cesar.school");
+        ((ArrayList<String>) cc).add("bbbb@cesar.school");
+
+        bcc = new ArrayList<String>();
+        ((ArrayList<String>) bcc).add("ccc@cesar.school");
+
+        Email email = new EmailBuilder()
+                .setCreationDate(Instant.now())
+                .setFrom("tfm@cesar.school")
+                .setTo(to)
+                .setCc(cc)
+                .setBcc(bcc)
+                .build();
+
+        Assertions.assertFalse(emailClient.isValidEmail(email));
+    }
+
 
     @Test
     public void testIsValidEmail_With_InvalidEmail_InvalidCc() {
