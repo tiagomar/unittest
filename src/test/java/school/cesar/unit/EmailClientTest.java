@@ -222,6 +222,7 @@ public class EmailClientTest {
 
         Assertions.assertFalse(emailClient.isValidEmail(email));
     }
+    
 
     @Test
     public void testIsValidEmail_With_InvalidEmail_InvalidCc() {
@@ -272,7 +273,7 @@ public class EmailClientTest {
     }
 
     @Test
-    public void createAccount_With_ValidAccount() {
+    public void createAccount_ValidAccount() {
         emailAccount = new EmailAccountBuilder()
                 .setUser("user")
                 .setDomain("domain")
@@ -281,12 +282,34 @@ public class EmailClientTest {
                 .build();
 
         Assertions.assertTrue(emailClient.createAccount(emailAccount));
-
-
     }
 
     @Test
-    public void createAccount_With_InvalidAccount() {
+    public void createAccount_InvalidAccount_InvalidUser() {
+        emailAccount = new EmailAccountBuilder()
+                .setUser("us*er")
+                .setDomain("domain")
+                .setPassword("password")
+                .setLastPasswordUpdate(Instant.now())
+                .build();
+
+        Assertions.assertFalse(emailClient.createAccount(emailAccount));
+    }
+
+    @Test
+    public void createAccount_InvalidAccount_InvalidDomain() {
+        emailAccount = new EmailAccountBuilder()
+                .setUser("user")
+                .setDomain("do..main")
+                .setPassword("password")
+                .setLastPasswordUpdate(Instant.now())
+                .build();
+
+        Assertions.assertFalse(emailClient.createAccount(emailAccount));
+    }
+
+    @Test
+    public void createAccount_InvalidAccount_InvalidPassword() {
         emailAccount = new EmailAccountBuilder()
                 .setUser("user")
                 .setDomain("domain")
@@ -295,7 +318,5 @@ public class EmailClientTest {
                 .build();
 
         Assertions.assertFalse(emailClient.createAccount(emailAccount));
-
-
     }
 }

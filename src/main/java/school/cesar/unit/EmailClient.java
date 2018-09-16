@@ -62,11 +62,11 @@ public class EmailClient {
     public boolean isValidEmail(Email email) {
         if (email.getCreationDate() != null) {
             if (isValidAddress(email.getFrom())) {
-                if (email.getTo().size() != 0 && isValidAddress(email.getTo())) {
-                    if (email.getCc().size() != 0 && !isValidAddress(email.getCc())) {
+                if (!email.getTo().isEmpty() && isValidAddress(email.getTo())) {
+                    if (!email.getCc().isEmpty() && !isValidAddress(email.getCc())) {
                         return false;
                     }
-                    if (email.getBcc().size() != 0 && !isValidAddress(email.getBcc())) {
+                    if (!email.getBcc().isEmpty() && !isValidAddress(email.getBcc())) {
                         return false;
                     }
                 } else return false;
@@ -109,7 +109,7 @@ public class EmailClient {
     - adcionar objeto a coleção accounts
      */
     public boolean createAccount(EmailAccount account) {
-        Collection<EmailAccount> accounts = new ArrayList<EmailAccount>();
+        Collection<EmailAccount> accounts = new ArrayList<>();
         if(isValidUser(account.getUser())){
             if(isValidDomain(account.getDomain())){
                 if(account.isPasswordLongerThanSixCharacters(account.getPassword())){
